@@ -1,0 +1,317 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PH.Blog.Application</name>
+    </assembly>
+    <members>
+        <member name="M:PH.Blog.Application.Apis.ArticleApis.AddAsync(PH.Blog.Contract.Dtos.AddArticleInput)">
+            <summary>
+            新增文章
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Application.Apis.ArticleApis.AddCommentAsync(PH.Blog.Contract.Dtos.AddCommentInput)">
+            <summary>
+            添加评论
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:PH.Blog.Application.Apis.ArticleApis.GetAllTagAsync">
+            <summary>
+            获取所有【标签】
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Application.Apis.ArticleApis.GetArticleByIdAsync(PH.Blog.Contract.Dtos.GetArticleByIdInput)">
+            <summary>
+            通过id获取文章详情
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Application.Apis.ArticleApis.GetArticleOfCommentsAsync(System.Int32)">
+            <summary>
+            获取文章评论列表
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:PH.Blog.Application.Apis.ArticleApis.SearchArticleAsync(PH.Blog.Contract.Dtos.SearchArticleInput)">
+            <summary>
+            文章搜索
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Application.Apis.AuthenticationApis.LoginByAccountandPasswordAsync(PH.Blog.Contract.Dtos.LoginInput)">
+            <summary>
+            通过账号密码登陆
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:PH.Blog.Application.Apis.LinkApis.GetGetAllLinksAsync">
+            <summary>
+            获取所有友链
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Application.Apis.MediaApis.PartialUploadAsync">
+            <summary>
+            分片上传
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:PH.Blog.Application.Apis.MediaApis.MergeFileAsync(PH.Blog.Contract.Dtos.MergeFileInput)">
+            <summary>
+            合并文件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Application.Apis.MediaApis.GetFilePartialIndexAsync(PH.Blog.Contract.Dtos.GetFileIndexInput)">
+            <summary>
+            获取已上传文件的分片index
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Application.Apis.MessageBoardApis.AddMessageBoardAsync(PH.Blog.Contract.Dtos.MessageBoardInput)">
+            <summary>
+            留言
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:PH.Blog.Application.Apis.MessageBoardApis.GetToPagedAsync(PH.Blog.Contract.Dtos.GetToPagedInput)">
+            <summary>
+            分页
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:PH.Blog.Application.Apis.MetaApis.AcessLogAsync">
+            <summary>
+            添加访问日志
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:PH.Blog.Application.Apis.MetaApis.GetBasicInfoAsync">
+            <summary>
+            获取作者基本信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Application.Apis.MetaApis.GetEventsAsync">
+            <summary>
+            获取所有事件
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:PH.Blog.Application.Apis.MetaApis.GetWebsiteDataAsync">
+            <summary>
+            网站数据
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:PH.Blog.Application.Apis.ToolApis.AddAsync(PH.Blog.Contract.Dtos.AddToolsInput)">
+            <summary>
+            添加工具
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:PH.Blog.Application.Apis.ToolApis.GetAllAsync">
+            <summary>
+            获取所有工具
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:PH.Blog.Application.ServiceImpl.ArticleSvc.Add(PH.Blog.Entity.Article)">
+            <summary>
+            添加文章
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Application.ServiceImpl.ArticleSvc.Add(PH.Blog.Entity.Comment)">
+            <summary>
+            添加评论
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:PH.Blog.Application.ServiceImpl.ArticleSvc.CountAsync">
+            <summary>
+            获取文章数量
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:PH.Blog.Application.ServiceImpl.ArticleSvc.EditAsync(PH.Blog.Entity.Article)">
+            <summary>
+            编辑文章
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:PH.Blog.Application.ServiceImpl.ArticleSvc.Get(System.Int32)">
+            <summary>
+            通过id获取文章
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:PH.Blog.Application.ServiceImpl.ArticleSvc.GetAllTagAsync">
+            <summary>
+            获取所有文章标签
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:PH.Blog.Application.ServiceImpl.ArticleSvc.GetCommentsByArticleIdAsync(System.Int32)">
+            <summary>
+            通过 articleId 获取评论
+            </summary>
+            <param name="articleId"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:PH.Blog.Application.ServiceImpl.ArticleSvc.SearchArticleAsync(System.String,System.Collections.Generic.IEnumerable{System.Int32},System.Int32,System.Int32)">
+            <summary>
+            文章搜索
+            </summary>
+            <param name="searchKey"></param>
+            <param name="tags"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Application.ServiceImpl.AuthenticationSvc.GetAsync(System.Int32)">
+            <summary>
+            通过 id 获取用户
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Application.ServiceImpl.AuthenticationSvc.GetByAccountAsync(System.String)">
+            <summary>
+            通过账号获取用户
+            </summary>
+            <param name="account"></param>
+            <param name="passwordHash"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:PH.Blog.Application.ServiceImpl.AuthenticationSvc.GetPrivilegeByRoleCodeAsync(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            通过 RoleCode 获取 Privilege
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:PH.Blog.Application.ServiceImpl.LinkSvc.GetAllAsync">
+            <summary>
+            获取所有友链
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Application.ServiceImpl.LogSvc.AcessCountAsync">
+            <summary>
+            访问数
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:PH.Blog.Application.ServiceImpl.LogSvc.AddAsync(PH.Blog.Entity.AcessLogs)">
+            <summary>
+            访问日志
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:PH.Blog.Application.ServiceImpl.LogSvc.AddEvent(PH.Blog.Entity.Events)">
+            <summary>
+            新增事件
+            </summary>
+            <param name="events"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Application.ServiceImpl.LogSvc.GetAllEventsAsync">
+            <summary>
+            获取所有事件
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:PH.Blog.Application.ServiceImpl.MediaSvc.FileChunkMergeAsync(System.String,System.String,System.Double,System.Int32)">
+            <summary>
+            文件合并
+            </summary>
+            <param name="hash">文件hash值</param>
+            <param name="targetFileName">合并文件名</param>
+            <param name="fileSize">文件大小</param>
+            <param name="totalPieces">分片总数</param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:PH.Blog.Application.ServiceImpl.MediaSvc.GetFilePartialIndex(System.String)">
+            <summary>
+            获取文件分片最大index
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Application.ServiceImpl.MessageBoardSvc.Add(PH.Blog.Entity.MessageBoard)">
+            <summary>
+            留言
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Application.ServiceImpl.MessageBoardSvc.CountAsync">
+            <summary>
+            留言数量
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:PH.Blog.Application.ServiceImpl.MessageBoardSvc.GetToPageAsync(System.Int32,System.Int32)">
+            <summary>
+            分页
+            </summary>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:PH.Blog.Application.ServiceImpl.ToolSvc.AddAsync(PH.Blog.Entity.Tools)">
+            <summary>
+            添加工具
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="M:PH.Blog.Application.ServiceImpl.ToolSvc.GetAllAsync">
+            <summary>
+            获取所有工具实体
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+    </members>
+</doc>

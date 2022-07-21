@@ -1,0 +1,3 @@
+{
+  "ConnectionStrings": "server=127.0.0.1:3306;database=blsasds;userid=username;password=password;Charset=utf8mb4;Convert Zero Datetime=True;TreatTinyAsBoolean=True;Allow Zero Datetime=True"
+}

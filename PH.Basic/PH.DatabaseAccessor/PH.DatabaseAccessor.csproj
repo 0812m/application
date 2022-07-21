@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+  </PropertyGroup>
+	<ItemGroup>
+		<FrameworkReference Include="Microsoft.AspNetCore.App" />
+	</ItemGroup>
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.3" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Abstractions" Version="6.0.3" />
+	  <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" Version="6.0.3" />
+	</ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\PH.ToolsLibrary\PH.ToolsLibrary.csproj" />
+	</ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Interceptors\" />
+  </ItemGroup>
+
+</Project>

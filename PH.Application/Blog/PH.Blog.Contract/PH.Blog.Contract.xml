@@ -1,0 +1,581 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PH.Blog.Contract</name>
+    </assembly>
+    <members>
+        <member name="M:PH.Blog.Contract.BaseApiController.GetRemoteIP">
+            <summary>
+            获取远程IP
+            </summary>
+            <remarks>
+            X-Forwarded-For 是一个 HTTP 扩展头部，用来表示 HTTP 请求端真实 IP。被各大 HTTP 代理、负载均衡等转发服务广泛使用。
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.BaseApiController.GetSource">
+            <summary>
+            获取请求来源
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.BaseApiController.GenerateNickName">
+            <summary>
+            生成昵称
+            </summary>
+            <returns></returns>
+            <exception cref="T:System.NotImplementedException"></exception>
+        </member>
+        <member name="T:PH.Blog.Contract.ConstPool">
+            <summary>
+            常量池
+            </summary>
+        </member>
+        <member name="F:PH.Blog.Contract.ConstPool.CACHKKEY_TAG">
+            <summary>
+            标签缓存key
+            </summary>
+        </member>
+        <member name="F:PH.Blog.Contract.ConstPool.CACHKKEY_COMMENT_PREFIX">
+            <summary>
+            评论缓存前缀
+            </summary>
+        </member>
+        <member name="F:PH.Blog.Contract.ConstPool.CACHKKEY_MESSAGE_PREFIX">
+            <summary>
+            留言缓存前缀
+            </summary>
+        </member>
+        <member name="F:PH.Blog.Contract.ConstPool.CACHKKEY_PLATFORM">
+            <summary>
+            平台缓存
+            </summary>
+        </member>
+        <member name="F:PH.Blog.Contract.ConstPool.CACHKKEY_BASICINFO">
+            <summary>
+            基础信息缓存
+            </summary>
+        </member>
+        <member name="F:PH.Blog.Contract.ConstPool.CACHEKEY_PRIVILEGE">
+            <summary>
+            权限缓存key
+            </summary>
+        </member>
+        <member name="F:PH.Blog.Contract.ConstPool.TYPE_BASICINFO">
+            <summary>
+            作者基础信息
+            </summary>
+        </member>
+        <member name="F:PH.Blog.Contract.ConstPool.TYPE_PLATFORM">
+            <summary>
+            平台
+            </summary>
+        </member>
+        <member name="F:PH.Blog.Contract.ConstPool.TYPE_DEFAULT_USER">
+            <summary>
+            默认用户
+            </summary>
+        </member>
+        <member name="T:PH.Blog.Contract.Dtos.AddArticleInput">
+            <summary>
+            add article model
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.AddArticleInput.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.AddArticleInput.Cover">
+            <summary>
+            封面
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.AddArticleInput.Opening">
+            <summary>
+            开头段落
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.AddArticleInput.Status">
+            <summary>
+            状态
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.AddArticleInput.Text">
+            <summary>
+            内容（无html）
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.AddArticleInput.Markdown">
+            <summary>
+            markdown 用于渲染页面
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.AddArticleInput.Tags">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.AddCommentInput.ArticleId">
+            <summary>
+            文章id
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.AddCommentInput.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.AddCommentInput.Contact">
+            <summary>
+            联系方式
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.AddCommentInput.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="T:PH.Blog.Contract.Dtos.MergeFileInput">
+            <summary>
+            文件合并 Input
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.MergeFileInput.Hash">
+            <summary>
+            文件MD5值
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.MergeFileInput.FileName">
+            <summary>
+            文件名
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.MergeFileInput.FileSize">
+            <summary>
+            文件大小
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.MergeFileInput.TotalPieces">
+            <summary>
+            总分片数
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.MessageBoardInput.Content">
+            <summary>
+            内容
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.MessageBoardInput.Contact">
+            <summary>
+            联系方式
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.MessageBoardInput.NickName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.CommentDto.Avatar">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.SearchArticleDto.Title">
+            <summary>
+            标题
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.SearchArticleDto.Cover">
+            <summary>
+            封面
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.SearchArticleDto.Opening">
+            <summary>
+            简介
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.SearchArticleDto.ReleaseTime">
+            <summary>
+            发布时间
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.SearchArticleDto.Pageviews">
+            <summary>
+            阅读量
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.SearchArticleDto.Tags">
+            <summary>
+            标签
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.BasicInfoDto.Avatar">
+            <summary>
+            头像
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.BasicInfoDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.BasicInfoDto.Platforms">
+            <summary>
+            平台
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.EventDto.Event">
+            <summary>
+            事件名
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.EventDto.Content">
+            <summary>
+            事件内容
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.EventDto.CreateTime">
+            <summary>
+            发生日期
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.ToolsDto.Image">
+            <summary>
+            图片
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.ToolsDto.Url">
+            <summary>
+            地址
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.ToolsDto.Name">
+            <summary>
+            工具名
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.ToolsDto.Description">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Dtos.ToolsDto.CanDownload">
+            <summary>
+            能否下载
+            </summary>
+        </member>
+        <member name="M:PH.Blog.Contract.IApis.IArticleApis.GetAllTagAsync">
+            <summary>
+            获取所有标签
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IApis.IArticleApis.AddAsync(PH.Blog.Contract.Dtos.AddArticleInput)">
+            <summary>
+            新增文章
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IApis.IArticleApis.SearchArticleAsync(PH.Blog.Contract.Dtos.SearchArticleInput)">
+            <summary>
+            文章搜索
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IApis.IArticleApis.GetArticleByIdAsync(PH.Blog.Contract.Dtos.GetArticleByIdInput)">
+            <summary>
+            通过 id 获取文章详情
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IApis.IArticleApis.AddCommentAsync(PH.Blog.Contract.Dtos.AddCommentInput)">
+            <summary>
+            评论
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IApis.IArticleApis.GetArticleOfCommentsAsync(System.Int32)">
+            <summary>
+            获取文章评论
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IApis.IAuthenticationApis.LoginByAccountandPasswordAsync(PH.Blog.Contract.Dtos.LoginInput)">
+            <summary>
+            通过账号密码登陆
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IApis.ILinkApis.GetGetAllLinksAsync">
+            <summary>
+            获取所有友链
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IApis.IMediaApis.PartialUploadAsync">
+            <summary>
+            分片上传
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IApis.IMessageBoardApis.AddMessageBoardAsync(PH.Blog.Contract.Dtos.MessageBoardInput)">
+            <summary>
+            留言
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IApis.IMessageBoardApis.GetToPagedAsync(PH.Blog.Contract.Dtos.GetToPagedInput)">
+            <summary>
+            获取留言并分页
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IApis.IMetaApis.GetEventsAsync">
+            <summary>
+            获取事件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IApis.IMetaApis.GetWebsiteDataAsync">
+            <summary>
+            获取网站数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IApis.IMetaApis.AcessLogAsync">
+            <summary>
+            添加访问日志
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IApis.IMetaApis.GetBasicInfoAsync">
+            <summary>
+            获取基础信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IApis.IToolApis.GetAllAsync">
+            <summary>
+            获取所有工具
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IApis.IToolApis.AddAsync(PH.Blog.Contract.Dtos.AddToolsInput)">
+            <summary>
+            添加工具
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:PH.Blog.Contract.Identity">
+            <summary>
+            用户身份模型
+            </summary>
+        </member>
+        <member name="P:PH.Blog.Contract.Identity.RoleJoin">
+            <summary>
+            以 "," 分隔存储Code
+            </summary>
+        </member>
+        <member name="M:PH.Blog.Contract.Identity.CurrentUserAsync">
+            <summary>
+            获取当前用户
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IServices.IArticleSvc.GetAllTagAsync">
+            <summary>
+            获取所有文章标签
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IServices.IArticleSvc.SearchArticleAsync(System.String,System.Collections.Generic.IEnumerable{System.Int32},System.Int32,System.Int32)">
+            <summary>
+            文章搜索
+            </summary>
+            <param name="searchKey"></param>
+            <param name="tags"></param>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IServices.IArticleSvc.Add(PH.Blog.Entity.Article)">
+            <summary>
+            添加文章
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IServices.IArticleSvc.Get(System.Int32)">
+            <summary>
+            通过 id 获取文章
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IServices.IArticleSvc.GetCommentsByArticleIdAsync(System.Int32)">
+            <summary>
+            通过 articleId 获取 comments
+            </summary>
+            <param name="articleId">文章id</param>
+            <returns>该文章的所有评论</returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IServices.IArticleSvc.Add(PH.Blog.Entity.Comment)">
+            <summary>
+            添加评论
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IServices.IArticleSvc.CountAsync">
+            <summary>
+            文章数量
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IServices.IArticleSvc.EditAsync(PH.Blog.Entity.Article)">
+            <summary>
+            编辑文章
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IServices.IAuthenticationSvc.GetByAccountAsync(System.String)">
+            <summary>
+            通过账号获取用户
+            </summary>
+            <param name="account"></param>
+            <param name="passwordHash"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IServices.IAuthenticationSvc.GetAsync(System.Int32)">
+            <summary>
+            通过 id 获取用户
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IServices.IAuthenticationSvc.GetPrivilegeByRoleCodeAsync(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            获取角色所拥有的权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IServices.IConfigurtionSvc.GetAsync(System.String)">
+            <summary>
+            通过 key 获取
+            </summary>
+            <param name="key"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IServices.IConfigurtionSvc.GetByTypeAsync(System.String)">
+            <summary>
+            通过 type 获取
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IServices.ILinkSvc.GetAllAsync">
+            <summary>
+            获取所有友链
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IServices.ILogSvc.AddEvent(PH.Blog.Entity.Events)">
+            <summary>
+            新增事件
+            </summary>
+            <param name="events"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IServices.ILogSvc.GetAllEventsAsync">
+            <summary>
+            获取所有事件
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IServices.ILogSvc.AcessCountAsync">
+            <summary>
+            访问数
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IServices.ILogSvc.AddAsync(PH.Blog.Entity.AcessLogs)">
+            <summary>
+            访问日志
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="P:PH.Blog.Contract.IServices.IMediaSvc.TempFolder">
+            <summary>
+            分片文件临时储存文件夹
+            </summary>
+        </member>
+        <member name="M:PH.Blog.Contract.IServices.IMediaSvc.FileChunkMergeAsync(System.String,System.String,System.Double,System.Int32)">
+            <summary>
+            文件合并
+            </summary>
+            <param name="hash">文件哈希值</param>
+            <param name="targetFileName">文件名</param>
+            <param name="fileSize">文件尺寸</param>
+            <param name="totalPieces">分片总数</param>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IServices.IMediaSvc.GetFilePartialIndex(System.String)">
+            <summary>
+            获取分片文件最大索引
+            </summary>
+            <param name="hash"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IServices.IMessageBoardSvc.GetToPageAsync(System.Int32,System.Int32)">
+            <summary>
+            分页
+            </summary>
+            <param name="pageIndex"></param>
+            <param name="pageSize"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IServices.IMessageBoardSvc.Add(PH.Blog.Entity.MessageBoard)">
+            <summary>
+            留言
+            </summary>
+            <param name="entity"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IServices.IMessageBoardSvc.CountAsync">
+            <summary>
+            统计留言
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IServices.IToolSvc.GetAllAsync">
+            <summary>
+            获取所有工具实体
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PH.Blog.Contract.IServices.IToolSvc.AddAsync(PH.Blog.Entity.Tools)">
+            <summary>
+            添加工具
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:PH.Blog.Contract.SecurityConst">
+            <summary>
+            Security 常量 
+            常量名：模块名_[ 功能 | route ]  全大写
+            值：api.模块名.[ 功能 | route ]   全小写
+            </summary>
+        </member>
+    </members>
+</doc>

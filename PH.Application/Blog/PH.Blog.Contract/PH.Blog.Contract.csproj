@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <DocumentationFile>$(MSBuildProjectName).xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\PH.Basic\PH.Authentication.JwtBearer\PH.Authentication.JwtBearer.csproj" />
+    <ProjectReference Include="..\..\..\PH.Basic\PH.Serilog\PH.Serilog.csproj" />
+    <ProjectReference Include="..\PH.EntityFrameworkCore\PH.EntityFrameworkCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="PH.Blog.Contract.xml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
