@@ -3,3 +3,4 @@
 /.vs/
 **/PH.UnitTest/
 **/launchSettings.json
+**/logs/
