@@ -24,21 +24,21 @@ namespace Microsoft.Extensions.DependencyInjection
         /// </summary>
         /// <param name="builder"></param>
         /// <returns></returns>
-        public static WebApplicationBuilder InitApplication(this WebApplicationBuilder builder,string[] args) 
+        public static WebApplicationBuilder InitApplication(this WebApplicationBuilder builder) 
         {
             ApplicationContext.HostingEnvironment = ApplicationContext.WebHostingEnvironment =  builder.Environment;
             
-            builder.Host.Configure(args);
+            builder.Host.Configure();
 
             return builder;
         }
 
-        public static void Configure(this ConfigureHostBuilder builder,string[] args)
+        public static void Configure(this ConfigureHostBuilder builder)
         {
             builder.ConfigureAppConfiguration((hostContext, configBuilder) =>
             {
                 //加载Json文件到配置源
-                configBuilder.AddEnvironmentVariables().LoadJsonConfiguration().AddCommandLine(args);
+                configBuilder.AddEnvironmentVariables().LoadJsonConfiguration();
 
                 ApplicationContext.ConfigurationBuilder = configBuilder;
                 ApplicationContext.Configuration = ApplicationContext.ConfigurationBuilder.Build();

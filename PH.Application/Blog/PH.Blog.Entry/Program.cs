@@ -1,6 +1,6 @@
 await WebApplication
-   .CreateBuilder()
-   .InitApplication(args)
+   .CreateBuilder(args)
+   .InitApplication()
    .UseDefaultSerilog()
    .Build()
    .RunAsync();
